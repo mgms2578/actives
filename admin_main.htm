@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>액티브시니어 런케이션 통합 서비스 플랫폼 관리자</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { primary: "#6366f1", secondary: "#a855f7" },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <style>
+      :where([class^="ri-"])::before { content: "\f3c2"; }
+      body {
+      font-family: 'Noto Sans KR', sans-serif;
+      background-color: #f9fafb;
+      }
+      .card {
+      transition: all 0.3s ease;
+      }
+      .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+      }
+      .db-link {
+      transition: all 0.2s ease;
+      }
+      .db-link:hover {
+      background-color: #f3f4f6;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="min-h-screen flex flex-col">
+      <!-- Header -->
+      <header class="bg-white border-b border-gray-200 py-4 px-6">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+          <div>
+            <h1 class="text-xl font-bold text-gray-800">
+              액티브시니어 런게이션 통합 서비스 플랫폼 관리자
+            </h1>
+            <p class="text-base text-gray-500 mt-1">통합 DB</p>
+          </div>
+          <button
+            class="px-4 py-2 text-sm text-gray-600 hover:text-gray-800 flex items-center !rounded-button"
+          >
+            <span class="mr-1">로그아웃</span>
+            <div class="w-4 h-4 flex items-center justify-center">
+              <i class="ri-logout-box-line"></i>
+            </div>
+          </button>
+        </div>
+      </header>
+      <!-- Main Content -->
+      <main class="flex-grow p-6">
+        <div class="max-w-7xl mx-auto">
+          <!-- First Row -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+            <!-- Card 1 -->
+            <div class="card bg-white rounded shadow-sm p-6">
+              <div class="flex flex-col items-center mb-4">
+                <div
+                  class="w-12 h-12 rounded-full bg-primary bg-opacity-10 flex items-center justify-center mb-4"
+                >
+                  <i class="ri-shield-check-line text-primary ri-lg"></i>
+                </div>
+                <h2 class="text-lg font-bold text-center text-gray-800 mb-1">
+                  디지털 금융 사기 방지
+                </h2>
+                <p class="text-sm text-gray-500 text-center mb-4">
+                  가상체험관, 교육평가, 설문결과, 수료증 발급 통계 관리
+                </p>
+              </div>
+              <div class="space-y-2">
+                <a
+                  href="https://amdt.thinkpool.com/outside/ansimGuard/experienceD/view.do"
+                  target="_blank"
+                  class="db-link flex justify-between items-center p-3 rounded border border-gray-100 hover:border-gray-200"
+                >
+                  <span class="text-sm text-gray-700">가상체험관 통계 DB</span>
+                  <div
+                    class="w-4 h-4 flex items-center justify-center text-gray-400"
+                  >
+                    <i class="ri-arrow-right-line"></i>
+                  </div>
+                </a>
+                <a
+                  href="https://amdt.thinkpool.com/outside/ansimGuard/eduEvalD/view.do"
+                  target="_blank"
+                  class="db-link flex justify-between items-center p-3 rounded border border-gray-100 hover:border-gray-200"
+                >
+                  <span class="text-sm text-gray-700">교육평가 DB</span>
+                  <div
+                    class="w-4 h-4 flex items-center justify-center text-gray-400"
+                  >
+                    <i class="ri-arrow-right-line"></i>
+                  </div>
+                </a>
+                <a
+                  href="https://amdt.thinkpool.com/outside/ansimGuard/eduStatisticsB/view.do"
+                  target="_blank"
+                  class="db-link flex justify-between items-center p-3 rounded border border-gray-100 hover:border-gray-200"
+                >
+                  <span class="text-sm text-gray-700"
+                    >사전/사후 설문결과 DB</span
+                  >
+                  <div
+                    class="w-4 h-4 flex items-center justify-center text-gray-400"
+                  >
+                    <i class="ri-arrow-right-line"></i>
+                  </div>
+                </a>
+                <a
+                  href="https://amdt.thinkpool.com/outside/ansimGuard/completionD/view.do"
+                  target="_blank"
+                  class="db-link flex justify-between items-center p-3 rounded border border-gray-100 hover:border-gray-200"
+                >
+                  <span class="text-sm text-gray-700">수료증 발급통계 DB</span>
+                  <div
+                    class="w-4 h-4 flex items-center justify-center text-gray-400"
+                  >
+                    <i class="ri-arrow-right-line"></i>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="card bg-white rounded shadow-sm p-6">
+              <div class="flex flex-col items-center mb-4">
+                <div
+                  class="w-12 h-12 rounded-full bg-primary bg-opacity-10 flex items-center justify-center mb-4"
+                >
+                  <i class="ri-funds-line text-primary ri-lg"></i>
+                </div>
+                <h2 class="text-lg font-bold text-center text-gray-800 mb-1">
+                  투자 마스터 클래스
+                </h2>
+                <p class="text-sm text-gray-500 text-center mb-4">
+                  사용자 활동 통계 및 미션 평가퀴즈 참여 관리
+                </p>
+              </div>
+              <div class="space-y-2">
+                <a
+                  href="https://masterclass.thinkpool.com/admin"
+                  target="_blank"
+                  class="db-link flex justify-between items-center p-3 rounded border border-gray-100 hover:border-gray-200"
+                >
+                  <span class="text-sm text-gray-700">사용자 활동 통계 DB</span>
+                  <div
+                    class="w-4 h-4 flex items-center justify-center text-gray-400"
+                  >
+                    <i class="ri-arrow-right-line"></i>
+                  </div>
+                </a>
+                <a
+                  href="https://masterclass.thinkpool.com/admin"
+                  target="_blank"
+                  class="db-link flex justify-between items-center p-3 rounded border border-gray-100 hover:border-gray-200"
+                >
+                  <span class="text-sm text-gray-700"
+                    >미션 평가퀴즈 참여 DB</span
+                  >
+                  <div
+                    class="w-4 h-4 flex items-center justify-center text-gray-400"
+                  >
+                    <i class="ri-arrow-right-line"></i>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="card bg-white rounded shadow-sm p-6">
+              <div class="flex flex-col items-center mb-4">
+                <div
+                  class="w-12 h-12 rounded-full bg-primary bg-opacity-10 flex items-center justify-center mb-4"
+                >
+                  <i class="ri-umbrella-line text-primary ri-lg"></i>
+                </div>
+                <h2 class="text-lg font-bold text-center text-gray-800 mb-1">
+                  시니어 맞춤 보험 설계
+                </h2>
+                <p class="text-sm text-gray-500 text-center mb-4">
+                  보험 매칭 데이터베이스 관리
+                </p>
+              </div>
+              <div class="space-y-2">
+                <a
+                  href="amin_siinsu.htm"
+                  target="_blank"
+                  class="db-link flex justify-between items-center p-3 rounded border border-gray-100 hover:border-gray-200"
+                >
+                  <span class="text-sm text-gray-700">보험 매칭 DB</span>
+                  <div
+                    class="w-4 h-4 flex items-center justify-center text-gray-400"
+                  >
+                    <i class="ri-arrow-right-line"></i>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Second Row -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Card 4 -->
+            <div class="card bg-white rounded shadow-sm p-6">
+              <div class="flex flex-col items-center mb-4">
+                <div
+                  class="w-12 h-12 rounded-full bg-primary bg-opacity-10 flex items-center justify-center mb-4"
+                >
+                  <i class="ri-user-search-line text-primary ri-lg"></i>
+                </div>
+                <h2 class="text-lg font-bold text-center text-gray-800 mb-1">
+                  휴먼팩터
+                </h2>
+                <p class="text-sm text-gray-500 text-center mb-4">
+                  체험 데이터베이스 관리
+                </p>
+              </div>
+              <div class="space-y-2">
+                <a
+                  href="#"
+                  target="_blank"
+                  class="db-link flex justify-between items-center p-3 rounded border border-gray-100 hover:border-gray-200"
+                >
+                  <span class="text-sm text-gray-700">체험 DB</span>
+                  <div
+                    class="w-4 h-4 flex items-center justify-center text-gray-400"
+                  >
+                    <i class="ri-arrow-right-line"></i>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <!-- Card 5 -->
+            <div class="card bg-white rounded shadow-sm p-6">
+              <div class="flex flex-col items-center mb-4">
+                <div
+                  class="w-12 h-12 rounded-full bg-primary bg-opacity-10 flex items-center justify-center mb-4"
+                >
+                  <i class="ri-robot-line text-primary ri-lg"></i>
+                </div>
+                <h2 class="text-lg font-bold text-center text-gray-800 mb-1">
+                  AI 디지털 크리처 육성 체험
+                </h2>
+                <p class="text-sm text-gray-500 text-center mb-4">
+                  체험 데이터베이스 관리
+                </p>
+              </div>
+              <div class="space-y-2">
+                <a
+                  href="amin_creature.htm"
+                  target="_blank"
+                  class="db-link flex justify-between items-center p-3 rounded border border-gray-100 hover:border-gray-200"
+                >
+                  <span class="text-sm text-gray-700">체험 DB</span>
+                  <div
+                    class="w-4 h-4 flex items-center justify-center text-gray-400"
+                  >
+                    <i class="ri-arrow-right-line"></i>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- Footer -->
+      <footer class="bg-white py-6 border-t border-gray-200">
+        <div class="text-center">
+          <p class="text-sm text-gray-500">
+            © ThinkPool | 액티브시니어 런게이션 통합 서비스 플랫폼
+          </p>
+          <p class="text-sm text-gray-500 mt-1">
+            고객센터: 1666-6300 사업자 등록번호: 116-81-54775 대표: 김동진
+          </p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

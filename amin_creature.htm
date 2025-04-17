@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>액티브시니어 런게이션 통합 서비스 플랫폼 관리자</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#6366f1',secondary:'#a855f7'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Noto Sans KR', sans-serif;
+background-color: #f9fafb;
+}
+.card {
+transition: all 0.3s ease;
+}
+.card:hover {
+transform: translateY(-2px);
+box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+}
+.db-link {
+transition: all 0.2s ease;
+}
+.db-link:hover {
+background-color: #f3f4f6;
+}
+</style>
+</head>
+<body>
+<div class="min-h-screen flex flex-col">
+<!-- Header -->
+<header class="bg-white border-b border-gray-200 py-4 px-6">
+<div class="max-w-7xl mx-auto flex justify-between items-center">
+<div>
+<h1 class="text-xl font-bold text-gray-800">액티브시니어 런케이션 통합 서비스 플랫폼 관리자</h1>
+<p class="text-base text-gray-500 mt-1">통합 DB</p>
+</div>
+<button class="px-4 py-2 text-sm text-gray-600 hover:text-gray-800 flex items-center !rounded-button">
+<span class="mr-1">로그아웃</span>
+<div class="w-4 h-4 flex items-center justify-center">
+<i class="ri-logout-box-line"></i>
+</div>
+</button>
+</div>
+</header>
+
+<!-- Main Content -->
+<main class="flex-grow py-8 px-6">
+<div class="max-w-7xl mx-auto">
+  <div class="mb-8">
+    <h2 class="text-lg font-bold text-gray-800 flex items-center">
+      <div class="w-5 h-5 bg-black mr-2"></div>
+      디지털 크리처 : 체험 DB
+    </h2>
+  </div>
+  
+  <div class="overflow-x-auto">
+  <table class="table-fixed w-full border border-gray-300">
+        <thead>
+          <tr>
+            <th class="w-[5%] px-4 py-3 border bg-gray-100 text-left">No</th>
+            <th class="w-[10%] px-4 py-3 border bg-gray-100 text-left">사용자 코드</th>
+            <th class="w-[15%] px-4 py-3 border bg-gray-100 text-left">대상 크리처</th>
+            <th class="w-[30%] px-4 py-3 border bg-gray-100 text-left">사용자 모션</th>
+            <th class="w-[20%] px-4 py-3 border bg-gray-100 text-left">인터랙션</th>
+            <th class="w-[20%] px-4 py-3 border bg-gray-100 text-left">일시</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+  <td class="border border-gray-300 px-4 py-3">1</td>
+  <td class="border border-gray-300 px-4 py-3">a-009</td>
+  <td class="border border-gray-300 px-4 py-3">디지털식물</td>
+  <td class="border border-gray-300 px-4 py-3">오른 손바닥을 위로 하여 아래에서 위로 들어올리기</td>
+  <td class="border border-gray-300 px-4 py-3">나무가 8%씩 자람</td>
+  <td class="border border-gray-300 px-4 py-3">2025.04.20 10:54</td>
+</tr>
+<tr>
+  <td class="border border-gray-300 px-4 py-3">2</td>
+  <td class="border border-gray-300 px-4 py-3">a-010</td>
+  <td class="border border-gray-300 px-4 py-3">디지털식물</td>
+  <td class="border border-gray-300 px-4 py-3">오른 손바닥을 위로 하여 아래에서 위로 들어올리기</td>
+  <td class="border border-gray-300 px-4 py-3">나무가 8%씩 자람</td>
+  <td class="border border-gray-300 px-4 py-3">2025.04.20 08:48</td>
+</tr>
+<tr>
+  <td class="border border-gray-300 px-4 py-3">3</td>
+  <td class="border border-gray-300 px-4 py-3">a-010</td>
+  <td class="border border-gray-300 px-4 py-3">디지털식물</td>
+  <td class="border border-gray-300 px-4 py-3">오른 손바닥을 위로 하여 아래에서 위로 들어올리기</td>
+  <td class="border border-gray-300 px-4 py-3">나무가 8%씩 자람</td>
+  <td class="border border-gray-300 px-4 py-3">2025.04.19 17:22</td>
+</tr>
+<tr>
+  <td class="border border-gray-300 px-4 py-3">4</td>
+  <td class="border border-gray-300 px-4 py-3">a-001</td>
+  <td class="border border-gray-300 px-4 py-3">디지털식물</td>
+  <td class="border border-gray-300 px-4 py-3">오른팔로 앞에 큰 원 그리기</td>
+  <td class="border border-gray-300 px-4 py-3">가지 전체가 흔들림</td>
+  <td class="border border-gray-300 px-4 py-3">2025.04.19 11:24</td>
+</tr>
+<tr>
+  <td class="border border-gray-300 px-4 py-3">5</td>
+  <td class="border border-gray-300 px-4 py-3">a-009</td>
+  <td class="border border-gray-300 px-4 py-3">디지털식물</td>
+  <td class="border border-gray-300 px-4 py-3">오른팔로 앞에 큰 원 그리기</td>
+  <td class="border border-gray-300 px-4 py-3">가지 전체가 흔들림</td>
+  <td class="border border-gray-300 px-4 py-3">2025.04.18 16:08</td>
+</tr>
+<tr>
+  <td class="border border-gray-300 px-4 py-3">6</td>
+  <td class="border border-gray-300 px-4 py-3">a-001</td>
+  <td class="border border-gray-300 px-4 py-3">디지털식물</td>
+  <td class="border border-gray-300 px-4 py-3">오른팔로 앞에 큰 원 그리기</td>
+  <td class="border border-gray-300 px-4 py-3">가지 전체가 흔들림</td>
+  <td class="border border-gray-300 px-4 py-3">2025.04.18 08:30</td>
+</tr>
+<tr>
+  <td class="border border-gray-300 px-4 py-3">7</td>
+  <td class="border border-gray-300 px-4 py-3">a-001</td>
+  <td class="border border-gray-300 px-4 py-3">디지털식물</td>
+  <td class="border border-gray-300 px-4 py-3">오른팔로 앞에 큰 원 그리기</td>
+  <td class="border border-gray-300 px-4 py-3">가지 전체가 흔들림</td>
+  <td class="border border-gray-300 px-4 py-3">2025.04.17 19:44</td>
+</tr>
+<tr>
+  <td class="border border-gray-300 px-4 py-3">8</td>
+  <td class="border border-gray-300 px-4 py-3">a-002</td>
+  <td class="border border-gray-300 px-4 py-3">디지털식물</td>
+  <td class="border border-gray-300 px-4 py-3">오른팔로 앞에 큰 원 그리기</td>
+  <td class="border border-gray-300 px-4 py-3">가지 전체가 흔들림</td>
+  <td class="border border-gray-300 px-4 py-3">2025.04.17 08:28</td>
+</tr>
+<tr>
+  <td class="border border-gray-300 px-4 py-3">9</td>
+  <td class="border border-gray-300 px-4 py-3">a-006</td>
+  <td class="border border-gray-300 px-4 py-3">디지털식물</td>
+  <td class="border border-gray-300 px-4 py-3">오른 손바닥을 위로 하여 아래에서 위로 들어올리기</td>
+  <td class="border border-gray-300 px-4 py-3">나무가 8%씩 자람</td>
+  <td class="border border-gray-300 px-4 py-3">2025.04.16 13:59</td>
+</tr>
+<tr>
+  <td class="border border-gray-300 px-4 py-3">10</td>
+  <td class="border border-gray-300 px-4 py-3">a-007</td>
+  <td class="border border-gray-300 px-4 py-3">디지털식물</td>
+  <td class="border border-gray-300 px-4 py-3">오른쪽 손 인사하듯 흔들기</td>
+  <td class="border border-gray-300 px-4 py-3">나무 이파리 반짝임</td>
+  <td class="border border-gray-300 px-4 py-3">2025.04.16 11:02</td>
+</tr>
+<tr>
+  <td class="border border-gray-300 px-4 py-3">11</td>
+  <td class="border border-gray-300 px-4 py-3">a-006</td>
+  <td class="border border-gray-300 px-4 py-3">디지털식물</td>
+  <td class="border border-gray-300 px-4 py-3">오른팔로 앞에 큰 원 그리기</td>
+  <td class="border border-gray-300 px-4 py-3">가지 전체가 흔들림</td>
+  <td class="border border-gray-300 px-4 py-3">2025.04.15 14:07</td>
+</tr>
+<tr>
+  <td class="border border-gray-300 px-4 py-3">12</td>
+  <td class="border border-gray-300 px-4 py-3">a-007</td>
+  <td class="border border-gray-300 px-4 py-3">디지털식물</td>
+  <td class="border border-gray-300 px-4 py-3">오른쪽 손 인사하듯 흔들기</td>
+  <td class="border border-gray-300 px-4 py-3">나무 이파리 반짝임</td>
+  <td class="border border-gray-300 px-4 py-3">2025.04.15 12:01</td>
+</tr>
+<tr>
+  <td class="border border-gray-300 px-4 py-3">13</td>
+  <td class="border border-gray-300 px-4 py-3">a-005</td>
+  <td class="border border-gray-300 px-4 py-3">디지털식물</td>
+  <td class="border border-gray-300 px-4 py-3">양 팔 옆으로 벌리기</td>
+  <td class="border border-gray-300 px-4 py-3">가지들이 활짝 벌어짐</td>
+  <td class="border border-gray-300 px-4 py-3">2025.04.15 09:45</td>
+</tr>
+<tr>
+  <td class="border border-gray-300 px-4 py-3">14</td>
+  <td class="border border-gray-300 px-4 py-3">a-005</td>
+  <td class="border border-gray-300 px-4 py-3">디지털식물</td>
+  <td class="border border-gray-300 px-4 py-3">오른 손바닥을 위로 하여 아래에서 위로 들어올리기</td>
+  <td class="border border-gray-300 px-4 py-3">나무가 8%씩 자람</td>
+  <td class="border border-gray-300 px-4 py-3">2025.04.14 16:57</td>
+</tr>
+<tr>
+  <td class="border border-gray-300 px-4 py-3">15</td>
+  <td class="border border-gray-300 px-4 py-3">a-003</td>
+  <td class="border border-gray-300 px-4 py-3">디지털식물</td>
+  <td class="border border-gray-300 px-4 py-3">오른쪽 손 인사하듯 흔들기</td>
+  <td class="border border-gray-300 px-4 py-3">나무 이파리 반짝임</td>
+  <td class="border border-gray-300 px-4 py-3">2025.04.14 11:11</td>
+</tr>
+<tr>
+  <td class="border border-gray-300 px-4 py-3">16</td>
+  <td class="border border-gray-300 px-4 py-3">a-005</td>
+  <td class="border border-gray-300 px-4 py-3">디지털식물</td>
+  <td class="border border-gray-300 px-4 py-3">양 팔 옆으로 벌리기</td>
+  <td class="border border-gray-300 px-4 py-3">가지들이 활짝 벌어짐</td>
+  <td class="border border-gray-300 px-4 py-3">2025.04.13 15:02</td>
+</tr>
+<tr>
+  <td class="border border-gray-300 px-4 py-3">17</td>
+  <td class="border border-gray-300 px-4 py-3">a-008</td>
+  <td class="border border-gray-300 px-4 py-3">디지털식물</td>
+  <td class="border border-gray-300 px-4 py-3">오른쪽 손 인사하듯 흔들기</td>
+  <td class="border border-gray-300 px-4 py-3">나무 이파리 반짝임</td>
+  <td class="border border-gray-300 px-4 py-3">2025.04.13 10:27</td>
+</tr>
+<tr>
+  <td class="border border-gray-300 px-4 py-3">18</td>
+  <td class="border border-gray-300 px-4 py-3">a-008</td>
+  <td class="border border-gray-300 px-4 py-3">디지털식물</td>
+  <td class="border border-gray-300 px-4 py-3">오른팔로 앞에 큰 원 그리기</td>
+  <td class="border border-gray-300 px-4 py-3">가지 전체가 흔들림</td>
+  <td class="border border-gray-300 px-4 py-3">2025.04.12 14:39</td>
+</tr>
+<tr>
+  <td class="border border-gray-300 px-4 py-3">19</td>
+  <td class="border border-gray-300 px-4 py-3">a-004</td>
+  <td class="border border-gray-300 px-4 py-3">디지털식물</td>
+  <td class="border border-gray-300 px-4 py-3">양 팔 옆으로 벌리기</td>
+  <td class="border border-gray-300 px-4 py-3">가지들이 활짝 벌어짐</td>
+  <td class="border border-gray-300 px-4 py-3">2025.04.11 17:46</td>
+</tr>
+<tr>
+  <td class="border border-gray-300 px-4 py-3">20</td>
+  <td class="border border-gray-300 px-4 py-3">a-003</td>
+  <td class="border border-gray-300 px-4 py-3">디지털식물</td>
+  <td class="border border-gray-300 px-4 py-3">양 팔 옆으로 벌리기</td>
+  <td class="border border-gray-300 px-4 py-3">가지들이 활짝 벌어짐</td>
+  <td class="border border-gray-300 px-4 py-3">2025.04.10 13:33</td>
+</tr>
+<tr>
+  <td class="border border-gray-300 px-4 py-3">21</td>
+  <td class="border border-gray-300 px-4 py-3">a-006</td>
+  <td class="border border-gray-300 px-4 py-3">디지털식물</td>
+  <td class="border border-gray-300 px-4 py-3">양 팔 옆으로 벌리기</td>
+  <td class="border border-gray-300 px-4 py-3">가지들이 활짝 벌어짐</td>
+  <td class="border border-gray-300 px-4 py-3">2025.04.10 10:18</td>
+</tr>
+<tr>
+  <td class="border border-gray-300 px-4 py-3">22</td>
+  <td class="border border-gray-300 px-4 py-3">a-004</td>
+  <td class="border border-gray-300 px-4 py-3">디지털식물</td>
+  <td class="border border-gray-300 px-4 py-3">양 팔 옆으로 벌리기</td>
+  <td class="border border-gray-300 px-4 py-3">가지들이 활짝 벌어짐</td>
+  <td class="border border-gray-300 px-4 py-3">2025.04.09 15:36</td>
+</tr>
+<tr>
+  <td class="border border-gray-300 px-4 py-3">23</td>
+  <td class="border border-gray-300 px-4 py-3">a-003</td>
+  <td class="border border-gray-300 px-4 py-3">디지털식물</td>
+  <td class="border border-gray-300 px-4 py-3">오른 손바닥을 위로 하여 아래에서 위로 들어올리기</td>
+  <td class="border border-gray-300 px-4 py-3">나무가 8%씩 자람</td>
+  <td class="border border-gray-300 px-4 py-3">2025.04.09 10:41</td>
+</tr>
+<tr>
+  <td class="border border-gray-300 px-4 py-3">24</td>
+  <td class="border border-gray-300 px-4 py-3">a-010</td>
+  <td class="border border-gray-300 px-4 py-3">디지털식물</td>
+  <td class="border border-gray-300 px-4 py-3">오른 손바닥을 위로 하여 아래에서 위로 들어올리기</td>
+  <td class="border border-gray-300 px-4 py-3">나무가 8%씩 자람</td>
+  <td class="border border-gray-300 px-4 py-3">2025.04.08 17:17</td>
+</tr>
+<tr>
+  <td class="border border-gray-300 px-4 py-3">25</td>
+  <td class="border border-gray-300 px-4 py-3">a-006</td>
+  <td class="border border-gray-300 px-4 py-3">디지털식물</td>
+  <td class="border border-gray-300 px-4 py-3">오른쪽 손 인사하듯 흔들기</td>
+  <td class="border border-gray-300 px-4 py-3">나무 이파리 반짝임</td>
+  <td class="border border-gray-300 px-4 py-3">2025.04.08 14:17</td>
+</tr>
+<tr>
+  <td class="border border-gray-300 px-4 py-3">26</td>
+  <td class="border border-gray-300 px-4 py-3">a-004</td>
+  <td class="border border-gray-300 px-4 py-3">디지털식물</td>
+  <td class="border border-gray-300 px-4 py-3">오른쪽 손 인사하듯 흔들기</td>
+  <td class="border border-gray-300 px-4 py-3">나무 이파리 반짝임</td>
+  <td class="border border-gray-300 px-4 py-3">2025.04.07 16:49</td>
+</tr>
+<tr>
+  <td class="border border-gray-300 px-4 py-3">27</td>
+  <td class="border border-gray-300 px-4 py-3">a-009</td>
+  <td class="border border-gray-300 px-4 py-3">디지털식물</td>
+  <td class="border border-gray-300 px-4 py-3">양 팔 옆으로 벌리기</td>
+  <td class="border border-gray-300 px-4 py-3">가지들이 활짝 벌어짐</td>
+  <td class="border border-gray-300 px-4 py-3">2025.04.07 14:51</td>
+</tr>
+<tr>
+  <td class="border border-gray-300 px-4 py-3">28</td>
+  <td class="border border-gray-300 px-4 py-3">a-002</td>
+  <td class="border border-gray-300 px-4 py-3">디지털식물</td>
+  <td class="border border-gray-300 px-4 py-3">오른쪽 손 인사하듯 흔들기</td>
+  <td class="border border-gray-300 px-4 py-3">나무 이파리 반짝임</td>
+  <td class="border border-gray-300 px-4 py-3">2025.04.07 08:53</td>
+</tr>
+<tr>
+  <td class="border border-gray-300 px-4 py-3">29</td>
+  <td class="border border-gray-300 px-4 py-3">a-007</td>
+  <td class="border border-gray-300 px-4 py-3">디지털식물</td>
+  <td class="border border-gray-300 px-4 py-3">양 팔 옆으로 벌리기</td>
+  <td class="border border-gray-300 px-4 py-3">가지들이 활짝 벌어짐</td>
+  <td class="border border-gray-300 px-4 py-3">2025.04.06 10:49</td>
+</tr>
+<tr>
+  <td class="border border-gray-300 px-4 py-3">30</td>
+  <td class="border border-gray-300 px-4 py-3">a-002</td>
+  <td class="border border-gray-300 px-4 py-3">디지털식물</td>
+  <td class="border border-gray-300 px-4 py-3">오른쪽 손 인사하듯 흔들기</td>
+  <td class="border border-gray-300 px-4 py-3">나무 이파리 반짝임</td>
+  <td class="border border-gray-300 px-4 py-3">2025.04.06 09:18</td>
+</tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</main>
+
+<!-- Footer -->
+<footer class="bg-white py-6 border-t border-gray-200">
+<div class="text-center">
+<p class="text-sm text-gray-500">© ThinkPool | 액티브시니어 런게이션 통합 서비스 플랫폼</p>
+<p class="text-sm text-gray-500 mt-1">고객센터: 1666-6300 사업자 등록번호: 116-81-54775 대표: 김동진</p>
+</div>
+</footer>
+</div>
+</body>
+</html>

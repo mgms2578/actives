@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>R:eum - 액티브 시니어 런케이션 통합 서비스 플랫폼</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+<style>:where([class^="ri-"])::before { content: "\f3c2"; }</style>
+<script>
+tailwind.config = {
+theme: {
+extend: {
+colors: {
+primary: '#2B4C7E',
+secondary: '#567EBB'
+},
+borderRadius: {
+'none': '0px',
+'sm': '4px',
+DEFAULT: '8px',
+'md': '12px',
+'lg': '16px',
+'xl': '20px',
+'2xl': '24px',
+'3xl': '32px',
+'full': '9999px',
+'button': '8px'
+},
+scrollBehavior: {
+'smooth': 'smooth',
+}
+}
+}
+}
+</script>
+</head>
+<body class="bg-white scroll-smooth">
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+// 모든 내부 링크에 스크롤 이벤트 추가
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+anchor.addEventListener('click', function(e) {
+e.preventDefault();
+const targetId = this.getAttribute('href');
+const targetElement = document.querySelector(targetId);
+if (targetElement) {
+// 헤더 높이를 고려한 오프셋 계산 (헤더 높이 + 추가 여백)
+const headerHeight = document.querySelector('header').offsetHeight;
+const yOffset = -headerHeight - 20; // 추가 여백 20px
+const y = targetElement.getBoundingClientRect().top + window.pageYOffset + yOffset;
+window.scrollTo({
+top: y,
+behavior: 'smooth'
+});
+}
+});
+});
+});
+</script>
+<header class="fixed w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
+<nav class="container mx-auto px-6 py-4">
+<div class="flex items-center justify-between">
+<a href="#" onclick="document.querySelector('section.relative.min-h-\\[800px\\]').scrollIntoView({behavior: 'smooth'})" class="flex items-center">
+<div class="flex items-center">
+<div class="w-40 h-12 bg-gradient-to-r from-[#2B4C7E] to-[#567EBB] flex items-center justify-center rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden group">
+<div class="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+<div class="absolute -inset-1 bg-gradient-to-r from-[#2B4C7E] to-[#567EBB] blur-lg opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
+<span class="text-2xl font-['Pacifico'] text-white tracking-wider relative z-10 flex items-center">
+<span class="text-3xl mr-1">R</span>
+<span class="text-2xl">:</span>
+<span class="text-2xl ml-1">EUM</span>
+</span>
+</div>
+<span class="ml-3 text-xs text-gray-600 whitespace-nowrap">액티브 시니어 런케이션 통합 서비스 플랫폼</span>
+</div>
+</a>
+<div class="flex gap-8">
+<a href="#service1" class="text-gray-700 font-medium hover:text-primary hover:scale-105 transition-all duration-300 scroll-smooth relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-primary after:left-0 after:bottom-0 after:transition-all hover:after:w-full">디지털 금융 사기 예방</a>
+<a href="#service2" class="text-gray-700 font-medium hover:text-primary hover:scale-105 transition-all duration-300 scroll-smooth relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-primary after:left-0 after:bottom-0 after:transition-all hover:after:w-full">투자 마스터 클래스</a>
+<a href="#service3" class="text-gray-700 font-medium hover:text-primary hover:scale-105 transition-all duration-300 scroll-smooth relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-primary after:left-0 after:bottom-0 after:transition-all hover:after:w-full">시니어 맞춤 보험설계</a>
+<a href="#service4" class="text-gray-700 font-medium hover:text-primary hover:scale-105 transition-all duration-300 scroll-smooth relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-primary after:left-0 after:bottom-0 after:transition-all hover:after:w-full">디지털 크리처</a>
+</div>
+</div>
+</nav>
+</header>
+<main>
+<section class="relative min-h-[800px] flex items-center bg-[#EDF2F7] overflow-hidden pt-24">
+<div class="container mx-auto px-6 relative z-10">
+<div class="grid grid-cols-12 gap-12 items-center">
+<div class="col-span-7 space-y-8">
+<h1 class="text-5xl font-bold leading-tight mb-12">
+다시 이어지는 <span class="text-primary">새로운 기회</span><br>
+<span class="text-2xl text-gray-600 mt-4 block leading-relaxed">
+액티브 시니어 생애설계와<br>자기계발을 위한 런케이션 서비스!
+</span>
+</h1>
+<div class="grid grid-cols-2 gap-6">
+<a href="#service1" class="bg-white/80 backdrop-blur-sm p-6 rounded-xl hover:shadow-lg transition-all transform hover:-translate-y-1 hover:scale-105 duration-300 border border-primary/10 block">
+<img src="img/22a32b95717cde95e201d05722934b22.jpg" alt="디지털 금융 사기 예방" class="w-full h-40 object-cover rounded-lg mb-4">
+<h3 class="font-bold text-lg mb-3 text-center">디지털 금융 사기 예방</h3>
+<p class="text-gray-600 text-sm">AI와 함게 하는 디지털 금융 사기 체험·예방 서비스</p>
+</a>
+<a href="#service2" class="bg-white/80 backdrop-blur-sm p-6 rounded-xl hover:shadow-lg transition-all transform hover:-translate-y-1 hover:scale-105 duration-300 border border-primary/10 block">
+<img src="img/cb603531fcb24dc0648a01ba00d344e3.jpg" alt="투자 마스터 클래스" class="w-full h-40 object-cover rounded-lg mb-4">
+<h3 class="font-bold text-lg mb-3 text-center">투자 마스터 클래스</h3>
+<p class="text-gray-600 text-sm">게임형 학습으로 투자 전략을 익히는 투자 교육 서비스</p>
+</a>
+<a href="#service3" class="bg-white/80 backdrop-blur-sm p-6 rounded-xl hover:shadow-lg transition-all transform hover:-translate-y-1 hover:scale-105 duration-300 border border-primary/10 block">
+<img src="img/a8eb60bf7c0e6876ca7d7a70a591bf7c.jpg" alt="시니어 맞춤 보험설계" class="w-full h-40 object-cover rounded-lg mb-4">
+<h3 class="font-bold text-lg mb-3 text-center">시니어 맞춤 보험 설계</h3>
+<p class="text-gray-600 text-sm">시니어의 필요에 맞춘 맞춤형 보험 설계 서비스</p>
+</a>
+<a href="#service4" class="bg-white/80 backdrop-blur-sm p-6 rounded-xl hover:shadow-lg transition-all transform hover:-translate-y-1 hover:scale-105 duration-300 border border-primary/10 block">
+<img src="img/d619f4319566eba2b81d6156fe511375.jpg" alt="AI 디지털 크리처" class="w-full h-40 object-cover rounded-lg mb-4">
+<h3 class="font-bold text-lg mb-3 text-center">디지털 크리처</h3>
+<p class="text-gray-600 text-sm">모션 인식 기술과 함께하는 디지털 크리처(펫) 정서 교감</p>
+</a>
+</div>
+</div>
+<div class="relative col-span-5 flex items-center justify-center">
+<img src="https://static.readdy.ai/image/91b97e0f4b6ca327686addfb10ec5923/b8965b0c78b9f6cb1bc5f2cdf0d3b679.png"
+class="w-[140%] h-auto rounded-2xl shadow-2xl mt-20" alt="Hero Image">
+</div>
+</div>
+</div>
+<div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#EDF2F7] to-transparent"></div>
+</section>
+<!-- 디지털 금융 사기 예방 섹션 -->
+<section id="service1" class="py-24 bg-white">
+<div class="container mx-auto px-6">
+<div class="grid grid-cols-12 gap-12 items-center">
+<div class="col-span-6 flex flex-col items-center">
+<img src="https://static.readdy.ai/image/91b97e0f4b6ca327686addfb10ec5923/dbf148cb408d786434df142181008ad1.png" alt="디지털 금융 사기 예방 교육" class="w-[72%] h-auto rounded-2xl shadow-lg object-cover mx-auto">
+</div>
+<div class="col-span-6 space-y-6">
+<div class="flex items-center justify-between mb-6">
+<h2 class="text-4xl font-bold text-gray-800">디지털 금융 사기 예방</h2>
+<a href="https://m.thinkpool.com/ansimGuard" target="_blank" class="bg-primary text-white px-8 py-3 rounded-button font-medium hover:bg-primary/90 transition-colors duration-300 flex items-center whitespace-nowrap">
+<i class="ri-external-link-line mr-2"></i> 서비스 바로가기
+</a>
+</div>
+<p class="text-lg text-gray-600 leading-relaxed">
+디지털 방식으로 사기를 치다
+AI와 함께 디지털 사기를 일으킬 능력을 키우세요. AI 기술을 활용하여 보이스피싱, 스미싱, 피싱 등을 직접 체험하고 학습할 수 있는 시니어 맞춤형 서비스입니다.
+</p>
+<div class="grid grid-cols-1 gap-6 mt-8">
+<div class="bg-[#F8FAFC] p-6 rounded-xl border border-gray-100 shadow-sm">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+<i class="ri-robot-line text-primary ri-xl"></i>
+</div>
+<h3 class="text-xl font-semibold mb-2">AI 챗봇 체험</h3>
+<p class="text-gray-600">보이스피싱, 스미싱 등 시나리오를 AI와 직접 체험하며, 사기 수법에 대한 이해와 대응 능력을 높일 수 있어요.</p>
+</div>
+<div class="bg-[#F8FAFC] p-6 rounded-xl border border-gray-100 shadow-sm">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+<i class="ri-book-open-line text-primary ri-xl"></i>
+</div>
+<h3 class="text-xl font-semibold mb-2">다양한 학습 자료 제공</h3>
+<p class="text-gray-600">사기 유형, 사례, 예방법 등 다양한 정보를 제공합니다. 누구나 쉽게 이해하고 따라올 수 있도록 구성돼 있어요.</p>
+</div>
+<div class="bg-[#F8FAFC] p-6 rounded-xl border border-gray-100 shadow-sm">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+<i class="ri-award-line text-primary ri-xl"></i>
+</div>
+<h3 class="text-xl font-semibold mb-2">교육 평가 시스템</h3>
+<p class="text-gray-600">사전/사후 평가를 통해 학습 효과를 확인하고, 필요 시 수료증도 발급할 수 있어요.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 투자 마스터 클래스 섹션 -->
+<section id="service2" class="py-24 bg-[#F8FAFC]">
+<div class="container mx-auto px-6">
+<div class="grid grid-cols-12 gap-12 items-center">
+<div class="col-span-6 space-y-6 order-2 md:order-1">
+<div class="flex items-center justify-between mb-6">
+<h2 class="text-4xl font-bold text-gray-800">투자 마스터 클래스</h2>
+<a href="https://masterclass.thinkpool.com" target="_blank" class="bg-primary text-white px-8 py-3 rounded-button font-medium hover:bg-primary/90 transition-colors duration-300 flex items-center whitespace-nowrap">
+<i class="ri-external-link-line mr-2"></i> 서비스 바로가기
+</a>
+</div>
+<p class="text-lg text-gray-600 leading-relaxed">
+투자, 게임처럼 쉽게 배우자!<br>
+투자 마스터 클래스는 게임을 통해 실전 투자 전략을 배우는 체험형 교육 플랫폼입니다.<br><br>
+미션으로 투자 기법을 익히고, 에피소드로 실제 매매를 체험하면서 투자 감각을 키워보세요!
+</p>
+<div class="bg-white rounded-xl shadow-md overflow-hidden mt-8">
+<div class="p-6">
+<h3 class="text-2xl font-semibold mb-4">어떻게 진행되나요?</h3>
+<ul class="space-y-4">
+<li class="flex items-start">
+<div class="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center mr-3 mt-1 flex-shrink-0">
+<i class="ri-lightbulb-line text-primary"></i>
+</div>
+<div>
+<h4 class="font-medium text-gray-800">💡 미션</h4>
+<p class="text-gray-600 mt-1">핵심 투자 기법을 쉽고 빠르게 학습.<br>퀴즈로 이해도를 확인하고 보너스 포인트 획득.</p>
+</div>
+</li>
+<li class="flex items-start">
+<div class="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center mr-3 mt-1 flex-shrink-0">
+<i class="ri-bar-chart-line text-primary"></i>
+</div>
+<div>
+<h4 class="font-medium text-gray-800">📊 에피소드</h4>
+<p class="text-gray-600 mt-1">배운 투자 기법을 활용해 시뮬레이션 매매 체험.<br>투자 결과와 적중률을 분석하며 실전 감각 강화.</p>
+</div>
+</li>
+<li class="flex items-start">
+<div class="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center mr-3 mt-1 flex-shrink-0">
+<i class="ri-trophy-line text-primary"></i>
+</div>
+<div>
+<h4 class="font-medium text-gray-800">🏆 보상</h4>
+<p class="text-gray-600 mt-1">미션과 에피소드를 완료하면 포인트와 업적 보상.<br>랭킹을 올리고, 클래스 마스터 휘장을 획득.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="bg-[#F8FAFC] p-6 border-t border-gray-100">
+<div class="flex items-center justify-between">
+<div>
+<span class="text-sm text-gray-500">지금 바로 시작해보세요!</span>
+</div>
+<a href="https://masterclass.thinkpool.com" target="_blank" class="bg-primary text-white px-6 py-2 rounded-button font-medium hover:bg-primary/90 transition-colors duration-300 whitespace-nowrap">
+서비스 바로가기
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="col-span-6 order-1 md:order-2">
+<img src="https://static.readdy.ai/image/91b97e0f4b6ca327686addfb10ec5923/b9d4b491392100a943976a3c00105dda.png" alt="투자 마스터 클래스" class="w-4/5 h-auto rounded-2xl shadow-lg object-cover mx-auto">
+</div>
+</div>
+</div>
+</section>
+<!-- 시니어 맞춤 보험설계 섹션 -->
+<section id="service3" class="py-24 bg-white">
+<div class="container mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-bold text-gray-800 mb-4">시니어 맞춤 보험설계</h2>
+<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+시니어에게 꼭 필요한 보험, 지금 바로 확인하세요!<br>
+시니어의 라이프 스타일을 고려한 챗봇 기반 대화형 맞춤형 보험 설계 서비스입니다.<br>
+복잡한 용어 없이, 시니어 눈높이에 맞춰 순차적으로 안내하며 스스로 보험을 선택하는 경험을 제공합니다.
+</p>
+<div class="mt-6">
+<a href="SInsu.htm" target="_blank" class="bg-primary text-white px-8 py-3 rounded-button font-medium hover:bg-primary/90 transition-colors duration-300 flex items-center whitespace-nowrap mx-auto w-fit">
+<i class="ri-robot-line mr-2"></i> 보험설계 챗봇 서비스 바로가기
+</a>
+</div>
+</div>
+<div class="grid grid-cols-3 gap-8 mb-16">
+<div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+<div class="h-48 bg-primary/5 flex items-center justify-center">
+<i class="ri-hospital-line text-primary ri-4x"></i>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-semibold mb-3">의료 관리 중심형</h3>
+<p class="text-gray-600 mb-4">
+병원 진료비, 처방약, 입원비 등을 실비로 보장하여 의료비 부담을 줄여줍니다.
+</p>
+<ul class="space-y-2 mb-6">
+<li class="flex items-center text-gray-700">
+<i class="ri-check-line text-primary mr-2"></i>
+<span>실손의료비 보장</span>
+</li>
+<li class="flex items-center text-gray-700">
+<i class="ri-check-line text-primary mr-2"></i>
+<span>갱신형 상품</span>
+</li>
+<li class="flex items-center text-gray-700">
+<i class="ri-check-line text-primary mr-2"></i>
+<span>연령별 보험료 차등</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+<div class="h-48 bg-primary/5 flex items-center justify-center">
+<i class="ri-heart-pulse-line text-primary ri-4x"></i>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-semibold mb-3">건강 예방 및 상해 대비형</h3>
+<p class="text-gray-600 mb-4">
+암, 중대 질병, 상해 등 주요 건강 리스크에 대비합니다. 간편심사형 상품도 있어 유병자나 고령자도 가입 가능합니다.
+</p>
+<ul class="space-y-2 mb-6">
+<li class="flex items-center text-gray-700">
+<i class="ri-check-line text-primary mr-2"></i>
+<span>암/중대질병 보장</span>
+</li>
+<li class="flex items-center text-gray-700">
+<i class="ri-check-line text-primary mr-2"></i>
+<span>간편심사 가능</span>
+</li>
+<li class="flex items-center text-gray-700">
+<i class="ri-check-line text-primary mr-2"></i>
+<span>고령자 맞춤 설계</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+<div class="h-48 bg-primary/5 flex items-center justify-center">
+<i class="ri-funds-box-line text-primary ri-4x"></i>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-semibold mb-3">사후 가족 재정 안정형</h3>
+<p class="text-gray-600 mb-4">
+사망 시 보험금을 통해 유가족의 경제적 안정을 지원하며, 유산 준비에도 활용할 수 있습니다.
+</p>
+<ul class="space-y-2 mb-6">
+<li class="flex items-center text-gray-700">
+<i class="ri-check-line text-primary mr-2"></i>
+<span>종신보험 설계</span>
+</li>
+<li class="flex items-center text-gray-700">
+<i class="ri-check-line text-primary mr-2"></i>
+<span>유가족 경제 지원</span>
+</li>
+<li class="flex items-center text-gray-700">
+<i class="ri-check-line text-primary mr-2"></i>
+<span>유산 설계 활용</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-3 gap-8 mb-16">
+<div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+<div class="h-48 bg-primary/5 flex items-center justify-center">
+<i class="ri-mental-health-line text-primary ri-4x"></i>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-semibold mb-3">간병·치매 대비형</h3>
+<p class="text-gray-600 mb-4">
+장기 간병 상태나 치매 진단 시 필요한 치료비와 간병비를 보장합니다.
+</p>
+<ul class="space-y-2 mb-6">
+<li class="flex items-center text-gray-700">
+<i class="ri-check-line text-primary mr-2"></i>
+<span>치매 진단비 보장</span>
+</li>
+<li class="flex items-center text-gray-700">
+<i class="ri-check-line text-primary mr-2"></i>
+<span>간병비 지원</span>
+</li>
+<li class="flex items-center text-gray-700">
+<i class="ri-check-line text-primary mr-2"></i>
+<span>장기요양 서비스 연계</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+<div class="h-48 bg-primary/5 flex items-center justify-center">
+<i class="ri-service-line text-primary ri-4x"></i>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-semibold mb-3">사후 대비형</h3>
+<p class="text-gray-600 mb-4">
+장례 비용을 미리 대비하여 사망 후 가족의 경제적 부담을 줄일 수 있습니다. 종신보험 특약이나 상조 연계 상품으로 제공됩니다.
+</p>
+<ul class="space-y-2 mb-6">
+<li class="flex items-center text-gray-700">
+<i class="ri-check-line text-primary mr-2"></i>
+<span>장례비용 보장</span>
+</li>
+<li class="flex items-center text-gray-700">
+<i class="ri-check-line text-primary mr-2"></i>
+<span>상조 서비스 연계</span>
+</li>
+<li class="flex items-center text-gray-700">
+<i class="ri-check-line text-primary mr-2"></i>
+<span>가족 부담 경감</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+<div class="h-48 bg-primary/5 flex items-center justify-center">
+<i class="ri-money-dollar-circle-line text-primary ri-4x"></i>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-semibold mb-3">연금 보장형</h3>
+<p class="text-gray-600 mb-4">
+은퇴 후 매월 또는 매년 일정 금액을 수령할 수 있는 상품으로, 안정적인 노후 생활을 지원합니다. 세액 공제 혜택도 제공됩니다.
+</p>
+<ul class="space-y-2 mb-6">
+<li class="flex items-center text-gray-700">
+<i class="ri-check-line text-primary mr-2"></i>
+<span>정기적 연금 수령</span>
+</li>
+<li class="flex items-center text-gray-700">
+<i class="ri-check-line text-primary mr-2"></i>
+<span>세액 공제 혜택</span>
+</li>
+<li class="flex items-center text-gray-700">
+<i class="ri-check-line text-primary mr-2"></i>
+<span>노후 생활 안정</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-3 gap-8 mb-16">
+<div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+<div class="h-48 bg-primary/5 flex items-center justify-center">
+<i class="ri-plane-line text-primary ri-4x"></i>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-semibold mb-3">여행 중심형</h3>
+<p class="text-gray-600 mb-4">
+여행 중 발생할 수 있는 질병, 상해, 사고, 수하물 분실, 항공 지연 등에 대비합니다.
+</p>
+<ul class="space-y-2 mb-6">
+<li class="flex items-center text-gray-700">
+<i class="ri-check-line text-primary mr-2"></i>
+<span>해외 의료비 보장</span>
+</li>
+<li class="flex items-center text-gray-700">
+<i class="ri-check-line text-primary mr-2"></i>
+<span>여행 관련 사고 보장</span>
+</li>
+<li class="flex items-center text-gray-700">
+<i class="ri-check-line text-primary mr-2"></i>
+<span>수하물/항공 지연 보상</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+<div class="h-48 bg-primary/5 flex items-center justify-center">
+<i class="ri-shield-keyhole-line text-primary ri-4x"></i>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-semibold mb-3">온라인 보호형</h3>
+<p class="text-gray-600 mb-4">
+금융사기, 해킹, 개인정보 유출 등 온라인 사고에 대비하며, 소송 및 복구 비용을 보장합니다.
+</p>
+<ul class="space-y-2 mb-6">
+<li class="flex items-center text-gray-700">
+<i class="ri-check-line text-primary mr-2"></i>
+<span>사이버 사고 보장</span>
+</li>
+<li class="flex items-center text-gray-700">
+<i class="ri-check-line text-primary mr-2"></i>
+<span>개인정보 유출 대응</span>
+</li>
+<li class="flex items-center text-gray-700">
+<i class="ri-check-line text-primary mr-2"></i>
+<span>금융사기 피해 보상</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+<div class="h-48 bg-primary/5 flex items-center justify-center">
+<i class="ri-bike-line text-primary ri-4x"></i>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-semibold mb-3">활동적인 라이프스타일형</h3>
+<p class="text-gray-600 mb-4">
+자전거, 등산, 수상 스포츠 등 레저 활동 중 발생할 수 있는 골절, 탈구 등 상해에 대비합니다.
+</p>
+<ul class="space-y-2 mb-6">
+<li class="flex items-center text-gray-700">
+<i class="ri-check-line text-primary mr-2"></i>
+<span>레저 활동 상해 보장</span>
+</li>
+<li class="flex items-center text-gray-700">
+<i class="ri-check-line text-primary mr-2"></i>
+<span>골절/탈구 특화 보장</span>
+</li>
+<li class="flex items-center text-gray-700">
+<i class="ri-check-line text-primary mr-2"></i>
+<span>액티브 시니어 맞춤형</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 gap-8 mb-16">
+<div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+<div class="h-48 bg-primary/5 flex items-center justify-center">
+<i class="ri-footprint-line text-primary ri-4x"></i>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-semibold mb-3">반려동물 보호형</h3>
+<p class="text-gray-600 mb-4">
+반려동물의 질병, 상해, 수술 등 예상치 못한 의료비용을 보장하여 반려동물과의 행복한 삶을 지원합니다.
+</p>
+<ul class="space-y-2 mb-6">
+<li class="flex items-center text-gray-700">
+<i class="ri-check-line text-primary mr-2"></i>
+<span>반려동물 의료비 보장</span>
+</li>
+<li class="flex items-center text-gray-700">
+<i class="ri-check-line text-primary mr-2"></i>
+<span>수술 및 입원비 지원</span>
+</li>
+<li class="flex items-center text-gray-700">
+<i class="ri-check-line text-primary mr-2"></i>
+<span>반려동물 배상책임 보장</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- AI 디지털 크리처 섹션 -->
+<section id="service4" class="py-24 bg-[#F8FAFC]">
+<div class="container mx-auto px-6">
+<div class="relative w-full mb-12">
+<div class="relative rounded-2xl shadow-lg overflow-hidden w-full h-[600px]">
+<video src="img/f08d9d3e-e334-4aa6-97a7-37347bfe7950.mp4" autoplay loop muted class="w-full h-full object-cover"></video>
+<div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-transparent">
+<div class="container mx-auto px-6 py-12">
+<h2 class="text-4xl font-bold text-white mb-6">디지털 크리처</h2>
+<p class="text-lg text-gray-200 leading-relaxed max-w-3xl">
+모션 인식 기술을 활용한 디지털 크리처와의 교감을 통해 정서적 안정은 물론, 디지털 기기 활용 능력까지 자연스럽게 향상시키는 프로그램입니다.<br><br>
+식물, 동물, 상상의 존재까지 다양한 형태로 구현된 디지털 크리처는 사용자의 손짓과 움직임에 민감하게 반응하며, 함께 시간을 보내고, 성장하고, 변화하는 '정서적 반려자'로 자리잡습니다.<br><br>
+매일의 소소한 관심과 따뜻한 돌봄 속에서, 이 디지털 존재는 단순한 기계가 아닌 '교감 가능한 친구'로 진화합니다.<br>
+기술이 낯설 수 있는 시니어에게도 자연스럽게 다가가, 감정의 연결고리를 만들고, 일상에 활력과 웃음을 더해줍니다.<br>
+지금, 새로운 디지털 동반자를 만나보세요. 따뜻한 변화가 시작됩니다.
+</p>
+</div>
+</div>
+<div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+<div class="flex items-center">
+<div class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mr-3">
+<i class="ri-webcam-line text-white ri-lg"></i>
+</div>
+<span class="text-white text-sm">실시간 모션 인식</span>
+</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-12 gap-12 items-start">
+<div class="col-span-12 space-y-6">
+<div class="bg-white p-6 rounded-xl shadow-sm mt-6 border border-primary/10">
+<h3 class="text-xl font-semibold mb-4 flex items-center">
+<i class="ri-camera-line text-primary mr-2"></i>
+모션 인식과 감성 인터랙션
+</h3>
+<p class="text-gray-600 mb-4">카메라를 통해 사용자의 동작을 실시간으로 인식하고, 디지털 크리처가 즉각 반응합니다.
+손을 흔들면 인사하고, 몸을 움직이면 함께 따라하며, 팔을 벌리면 반가운 제스처를 보여주는 등, 자연스럽고 감성적인 상호작용이 가능합니다.
+이러한 교감은 시니어의 디지털 적응을 돕고, 정서적 반려로서의 유대감을 키워줍니다.
+</p>
+<div class="grid grid-cols-3 gap-4 mt-4">
+<div class="bg-primary/5 p-3 rounded-lg text-center">
+<div class="w-10 h-10 mx-auto bg-primary/10 rounded-full flex items-center justify-center mb-2">
+<i class="ri-hand-line text-primary"></i>
+</div>
+<p class="text-sm text-gray-700">모션 인식</p>
+</div>
+<div class="bg-primary/5 p-3 rounded-lg text-center">
+<div class="w-10 h-10 mx-auto bg-primary/10 rounded-full flex items-center justify-center mb-2">
+<i class="ri-walk-line text-primary"></i>
+</div>
+<p class="text-sm text-gray-700">몸 움직임</p>
+</div>
+<div class="bg-primary/5 p-3 rounded-lg text-center">
+<div class="w-10 h-10 mx-auto bg-primary/10 rounded-full flex items-center justify-center mb-2">
+<i class="ri-emotion-line text-primary"></i>
+</div>
+<p class="text-sm text-gray-700">감성 인터렉션</p>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-6 mt-6">
+<div class="bg-white p-6 rounded-xl shadow-sm">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+<i class="ri-emotion-happy-line text-primary ri-xl"></i>
+</div>
+<h3 class="text-xl font-semibold mb-2">정서적 교감</h3>
+<p class="text-gray-600">디지털 크리처와의 대화와 교감을 통해 정서적 안정감을 제공하고 외로움을 해소합니다.</p>
+</div>
+<div class="bg-white p-6 rounded-xl shadow-sm">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+<i class="ri-brain-line text-primary ri-xl"></i>
+</div>
+<h3 class="text-xl font-semibold mb-2">인지 기능 향상</h3>
+<p class="text-gray-600">손 흔들기, 몸 움직임 등 모션 교감을 통해 기억력과 집중력을 자연스럽게 자극합니다.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-[#2A2A2A] text-gray-400 py-6">
+<div class="container mx-auto px-6">
+<div class="flex flex-col items-center justify-center text-center">
+<p class="mb-3">© ThinkPool | R:eum 시니어 런케이션 통합 서비스 플랫폼</p>
+<div class="flex items-center gap-4 flex-wrap justify-center">
+<span>고객센터: 1666-6300</span>
+<span>사업자 등록번호: 116-81-54775</span>
+<span>대표: 김동진</span>
+</div>
+</div>
+</div>
+</footer>
+</body>
+</html>

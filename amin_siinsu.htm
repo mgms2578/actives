@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>액티브시니어 런게이션 통합 서비스 플랫폼 관리자</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#6366f1',secondary:'#a855f7'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Noto Sans KR', sans-serif;
+background-color: #f9fafb;
+}
+.card {
+transition: all 0.3s ease;
+}
+.card:hover {
+transform: translateY(-2px);
+box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+}
+.db-link {
+transition: all 0.2s ease;
+}
+.db-link:hover {
+background-color: #f3f4f6;
+}
+</style>
+</head>
+<body>
+<div class="min-h-screen flex flex-col">
+<!-- Header -->
+<header class="bg-white border-b border-gray-200 py-4 px-6">
+<div class="max-w-7xl mx-auto flex justify-between items-center">
+<div>
+<h1 class="text-xl font-bold text-gray-800">액티브시니어 런케이션 통합 서비스 플랫폼 관리자</h1>
+<p class="text-base text-gray-500 mt-1">통합 DB</p>
+</div>
+<button class="px-4 py-2 text-sm text-gray-600 hover:text-gray-800 flex items-center !rounded-button">
+<span class="mr-1">로그아웃</span>
+<div class="w-4 h-4 flex items-center justify-center">
+<i class="ri-logout-box-line"></i>
+</div>
+</button>
+</div>
+</header>
+
+<!-- Main Content -->
+<main class="flex-grow py-8 px-6">
+<div class="max-w-7xl mx-auto">
+  <div class="mb-8">
+    <h2 class="text-lg font-bold text-gray-800 flex items-center">
+      <div class="w-5 h-5 bg-black mr-2"></div>
+      시니어 맞춤 보험 설계 : 보험 매칭 DB
+    </h2>
+  </div>
+  
+  <div class="overflow-x-auto">
+  <table class="table-fixed w-full border border-gray-300">
+    <thead>
+        <tr>
+    <th class="border border-gray-300 bg-gray-100 px-4 py-3 text-left w-[5%]">No</th>
+    <th class="border border-gray-300 bg-gray-100 px-4 py-3 text-left w-[25%]">보험유형</th>
+    <th class="border border-gray-300 bg-gray-100 px-4 py-3 text-left w-[40%]">보험사&보험상품</th>
+    <th class="border border-gray-300 bg-gray-100 px-4 py-3 text-left w-[30%]">URL</th>
+	</tr>
+      </thead>
+      <tbody>
+          <tr>
+  <td class="border border-gray-300 px-4 py-3">1</td>
+  <td class="border border-gray-300 px-4 py-3">의료 관리 중심형 (실손보험)</td>
+  <td class="border border-gray-300 px-4 py-3">삼성생명 인터넷 급여 실손의료비보장보험</td>
+  <td class="border border-gray-300 px-4 py-3">
+    <a href="https://direct.samsunglife.com/medical.eds?cid=di%3Asli%3Amedical%3Amenu" class="text-primary hover:underline truncate block" target="_blank">https://direct.samsunglife.com/medical.eds?cid=di%3Asli%3Amedical%3Amenu</a>
+  </td>
+</tr>
+<tr>
+  <td class="border border-gray-300 px-4 py-3">2</td>
+  <td class="border border-gray-300 px-4 py-3">의료 관리 중심형 (실손보험)</td>
+  <td class="border border-gray-300 px-4 py-3">한화생명 기본형 급여 e실손의료비보장보험</td>
+  <td class="border border-gray-300 px-4 py-3">
+    <a href="https://onsure.co.kr/p/contract/computeRealloss.do?utm_source=official_pc&utm_medium=hanwha&utm_campaign=realloss&idx=117" class="text-primary hover:underline truncate block" target="_blank">https://onsure.co.kr/p/contract/computeRealloss.do?utm_source=official_pc&utm_medium=hanwha&utm_campaign=realloss&idx=117</a>
+  </td>
+</tr>
+<tr>
+  <td class="border border-gray-300 px-4 py-3">3</td>
+  <td class="border border-gray-300 px-4 py-3">의료 관리 중심형 (실손보험)</td>
+  <td class="border border-gray-300 px-4 py-3">무배당 메리츠 다이렉트 실손의료비보험2408</td>
+  <td class="border border-gray-300 px-4 py-3">
+    <a href="https://www.meritzfire.com/health-and-kids/direct-medicalInfo.do#!/" class="text-primary hover:underline truncate block" target="_blank">https://www.meritzfire.com/health-and-kids/direct-medicalInfo.do#!/</a>
+  </td>
+</tr>
+<tr>
+  <td class="border border-gray-300 px-4 py-3">4</td>
+  <td class="border border-gray-300 px-4 py-3">건강 예방 및 상해 대비형 (암보험, 건강보험, 상해보험, 종합보험)</td>
+  <td class="border border-gray-300 px-4 py-3">삼성화재 통합암진단비</td>
+  <td class="border border-gray-300 px-4 py-3">
+    <a href="https://www.samsungfire.com/product/P_P02_14_06_000.html" class="text-primary hover:underline truncate block" target="_blank">https://www.samsungfire.com/product/P_P02_14_06_000.html</a>
+  </td>
+</tr>
+<tr>
+  <td class="border border-gray-300 px-4 py-3">5</td>
+  <td class="border border-gray-300 px-4 py-3">건강 예방 및 상해 대비형 (암보험, 건강보험, 상해보험, 종합보험)</td>
+  <td class="border border-gray-300 px-4 py-3">한화생명 e암보험(비갱신형) 무배당</td>
+  <td class="border border-gray-300 px-4 py-3">
+    <a href="https://direct.hanwhalife.com/products/CMS00012?utm_source=naverbrand_pc&utm_medium=bs&utm_campaign=brand&utm_content=2408_Branding_AnalysisX_PC_2_homelink&utm_term=%ED%95%9C%ED%99%94%EC%83%9D%EB%AA%85&BSCPN=HLE_PC&BSPRG=NVBRNO&BSCCN1=HLE_PC" class="text-primary hover:underline truncate block" target="_blank">https://direct.hanwhalife.com/products/CMS00012?utm_source=naverbrand_pc&utm_medium=bs&utm_campaign=brand&utm_content=2408_Branding_AnalysisX_PC_2_homelink&utm_term=%ED%95%9C%ED%99%94%EC%83%9D%EB%AA%85&BSCPN=HLE_PC&BSPRG=NVBRNO&BSCCN1=HLE_PC</a>
+  </td>
+</tr>
+<tr>
+  <td class="border border-gray-300 px-4 py-3">6</td>
+  <td class="border border-gray-300 px-4 py-3">건강 예방 및 상해 대비형 (암보험, 건강보험, 상해보험, 종합보험)</td>
+  <td class="border border-gray-300 px-4 py-3">(무)AIA 건강+ 암보험(간편심사형) (유병자,고령자도 가입가능)</td>
+  <td class="border border-gray-300 px-4 py-3">
+    <a href="https://www.aia.co.kr/ko/our-products/medical-protection/non-par-health-plus-cancer-plan-renewal-DM.html" class="text-primary hover:underline truncate block" target="_blank">https://www.aia.co.kr/ko/our-products/medical-protection/non-par-health-plus-cancer-plan-renewal-DM.html</a>
+  </td>
+</tr>
+<tr>
+  <td class="border border-gray-300 px-4 py-3">7</td>
+  <td class="border border-gray-300 px-4 py-3">건강 예방 및 상해 대비형 (암보험, 건강보험, 상해보험, 종합보험)</td>
+  <td class="border border-gray-300 px-4 py-3">메리츠화재 또또암 간편355 (유병자,고령자도 가입가능)</td>
+  <td class="border border-gray-300 px-4 py-3">
+    <a href="https://meritz-direct.co.kr/life/" class="text-primary hover:underline truncate block" target="_blank">https://meritz-direct.co.kr/life/</a>
+  </td>
+</tr>
+<tr>
+  <td class="border border-gray-300 px-4 py-3">8</td>
+  <td class="border border-gray-300 px-4 py-3">건강 예방 및 상해 대비형 (암보험, 건강보험, 상해보험, 종합보험)</td>
+  <td class="border border-gray-300 px-4 py-3">메리츠화재 무배당 올바른 100세건강보험2407</td>
+  <td class="border border-gray-300 px-4 py-3">
+    <a href="https://www.meritzfire.com/health-and-kids/life-health-care.do#!/" class="text-primary hover:underline truncate block" target="_blank">https://www.meritzfire.com/health-and-kids/life-health-care.do#!/</a>
+  </td>
+</tr>
+<tr>
+  <td class="border border-gray-300 px-4 py-3">9</td>
+  <td class="border border-gray-300 px-4 py-3">건강 예방 및 상해 대비형 (암보험, 건강보험, 상해보험, 종합보험)</td>
+  <td class="border border-gray-300 px-4 py-3">교보생명 무배당 교보좋은건강보험</td>
+  <td class="border border-gray-300 px-4 py-3">
+    <a href="https://www.abllife.co.kr/cms/pban/prdtPban/whlPrdt/__icsFiles/afieldfile/2022/09/01/20220901_DIY_%EB%AC%B4%EB%B0%B0%EB%8B%B9_ABL_THE%EA%B1%B4%EA%B0%95%ED%86%B5%ED%95%A9%EB%B3%B4%ED%97%98(%EA%B0%B1%EC%8B%A0%ED%98%95)2205.pdf" class="text-primary hover:underline truncate block" target="_blank">https://www.abllife.co.kr/cms/pban/prdtPban/whlPrdt/__icsFiles/afieldfile/2022/09/01/20220901_DIY_%EB%AC%B4%EB%B0%B0%EB%8B%B9_ABL_THE%EA%B1%B4%EA%B0%95%ED%86%B5%ED%95%A9%EB%B3%B4%ED%97%98(%EA%B0%B1%EC%8B%A0%ED%98%95)2205.pdf</a>
+  </td>
+</tr>
+<tr>
+  <td class="border border-gray-300 px-4 py-3">10</td>
+  <td class="border border-gray-300 px-4 py-3">건강 예방 및 상해 대비형 (암보험, 건강보험, 상해보험, 종합보험)</td>
+  <td class="border border-gray-300 px-4 py-3">ABL생명 DIY ABL THE 건강통합보험</td>
+  <td class="border border-gray-300 px-4 py-3">
+    <a href="https://www.idbins.com/FWMALV6041.do" class="text-primary hover:underline truncate block" target="_blank">https://www.idbins.com/FWMALV6041.do</a>
+  </td>
+</tr>
+<tr>
+  <td class="border border-gray-300 px-4 py-3">11</td>
+  <td class="border border-gray-300 px-4 py-3">건강 예방 및 상해 대비형 (암보험, 건강보험, 상해보험, 종합보험)</td>
+  <td class="border border-gray-300 px-4 py-3">라이나생명 THE간편한 건강보험 (유병자,고령자도 가입가능)</td>
+  <td class="border border-gray-300 px-4 py-3">
+    <a href="https://www.lina.co.kr/product/insurance-product-tm/productView_P00172" class="text-primary hover:underline truncate block" target="_blank">https://www.lina.co.kr/product/insurance-product-tm/productView_P00172</a>
+  </td>
+</tr>
+<tr>
+  <td class="border border-gray-300 px-4 py-3">12</td>
+  <td class="border border-gray-300 px-4 py-3">건강 예방 및 상해 대비형 (암보험, 건강보험, 상해보험, 종합보험)</td>
+  <td class="border border-gray-300 px-4 py-3">무배당 메리츠 4080 시니어케어보험2404</td>
+  <td class="border border-gray-300 px-4 py-3">
+    <a href="https://www.meritzfire.com/health-and-kids/seniorcare.do#!/" class="text-primary hover:underline truncate block" target="_blank">https://www.meritzfire.com/health-and-kids/seniorcare.do#!/</a>
+  </td>
+</tr>
+<tr>
+  <td class="border border-gray-300 px-4 py-3">13</td>
+  <td class="border border-gray-300 px-4 py-3">건강 예방 및 상해 대비형 (암보험, 건강보험, 상해보험, 종합보험)</td>
+  <td class="border border-gray-300 px-4 py-3">라이프플래닛생명보험 라이프플래닛 e상해보험</td>
+  <td class="border border-gray-300 px-4 py-3">
+    <a href="https://www.lifeplanet.co.kr/products/pg/PG17000S.dev" class="text-primary hover:underline truncate block" target="_blank">https://www.lifeplanet.co.kr/products/pg/PG17000S.dev</a>
+  </td>
+</tr>
+<tr>
+  <td class="border border-gray-300 px-4 py-3">14</td>
+  <td class="border border-gray-300 px-4 py-3">건강 예방 및 상해 대비형 (암보험, 건강보험, 상해보험, 종합보험)</td>
+  <td class="border border-gray-300 px-4 py-3">AIG손해보험 AIG 늘 필요한 상해보험</td>
+  <td class="border border-gray-300 px-4 py-3">
+    <a href="https://www.aig.co.kr/wp/dpwpm016.jsp?prodAlias=newpaplus&prodCd=L0440&menuId=MS1169" class="text-primary hover:underline truncate block" target="_blank">https://www.aig.co.kr/wp/dpwpm016.jsp?prodAlias=newpaplus&prodCd=L0440&menuId=MS1169</a>
+  </td>
+</tr>
+<tr>
+  <td class="border border-gray-300 px-4 py-3">15</td>
+  <td class="border border-gray-300 px-4 py-3">건강 예방 및 상해 대비형 (암보험, 건강보험, 상해보험, 종합보험)</td>
+  <td class="border border-gray-300 px-4 py-3">삼성화재 마이헬스파트너</td>
+  <td class="border border-gray-300 px-4 py-3">
+    <a href="https://www.samsungfire.com/product/P_P02_03_02_042_1.html" class="text-primary hover:underline truncate block" target="_blank">https://www.samsungfire.com/product/P_P02_03_02_042_1.html</a>
+  </td>
+</tr>
+<tr>
+  <td class="border border-gray-300 px-4 py-3">16</td>
+  <td class="border border-gray-300 px-4 py-3">건강 예방 및 상해 대비형 (암보험, 건강보험, 상해보험, 종합보험)</td>
+  <td class="border border-gray-300 px-4 py-3">메리츠화재 무배당 올바른 100세건강보험2407</td>
+  <td class="border border-gray-300 px-4 py-3">
+    <a href="https://store.meritzfire.com/health-and-kids/life-health-care.do#!/" class="text-primary hover:underline truncate block" target="_blank">https://store.meritzfire.com/health-and-kids/life-health-care.do#!/</a>
+  </td>
+</tr>
+          <tr>
+  <td class="border border-gray-300 px-4 py-3">17</td>
+  <td class="border border-gray-300 px-4 py-3">건강 예방 및 상해 대비형 (암보험, 건강보험, 상해보험, 종합보험)</td>
+  <td class="border border-gray-300 px-4 py-3">DB손해보험 - 나에게 맞춘 간편건강보험 (유병자,고령자도 가입가능)</td>
+  <td class="border border-gray-300 px-4 py-3">
+    <a href="https://www.idbins.com/FWMALV0840.do" class="text-primary hover:underline truncate block" target="_blank">https://www.idbins.com/FWMALV0840.do</a>
+  </td>
+</tr>
+<tr>
+  <td class="border border-gray-300 px-4 py-3">18</td>
+  <td class="border border-gray-300 px-4 py-3">건강 예방 및 상해 대비형 (암보험, 건강보험, 상해보험, 종합보험)</td>
+  <td class="border border-gray-300 px-4 py-3">삼성화재 새로고침(유병자,고령자도 가입가능)</td>
+  <td class="border border-gray-300 px-4 py-3">
+    <a href="https://www.samsungfire.com/product/P_P02_03_11_117_1.html" class="text-primary hover:underline truncate block" target="_blank">https://www.samsungfire.com/product/P_P02_03_11_117_1.html</a>
+  </td>
+</tr>
+<tr>
+  <td class="border border-gray-300 px-4 py-3">19</td>
+  <td class="border border-gray-300 px-4 py-3">여행 중심형 (여행자보험)</td>
+  <td class="border border-gray-300 px-4 py-3">DB손해보험 다이렉트 국내여행보험</td>
+  <td class="border border-gray-300 px-4 py-3">
+    <a href="https://www.directdb.co.kr/gnrl/prd/trvl/dmst/custInfoView.do?searchPdcCd=10542&searchPdcTrtHistCd=00&pdcDvcd=g_in_trvl&partner_code=G046" class="text-primary hover:underline truncate block" target="_blank">https://www.directdb.co.kr/gnrl/prd/trvl/dmst/custInfoView.do?searchPdcCd=10542&searchPdcTrtHistCd=00&pdcDvcd=g_in_trvl&partner_code=G046</a>
+  </td>
+</tr>
+<tr>
+  <td class="border border-gray-300 px-4 py-3">20</td>
+  <td class="border border-gray-300 px-4 py-3">여행 중심형 (여행자보험)</td>
+  <td class="border border-gray-300 px-4 py-3">하나 해외여행보험</td>
+  <td class="border border-gray-300 px-4 py-3">
+    <a href="https://www.hanainsure.co.kr/w/product/travelLeisure/abroadTravelIntro" class="text-primary hover:underline truncate block" target="_blank">https://www.hanainsure.co.kr/w/product/travelLeisure/abroadTravelIntro</a>
+  </td>
+</tr>
+<tr>
+  <td class="border border-gray-300 px-4 py-3">21</td>
+  <td class="border border-gray-300 px-4 py-3">여행 중심형 (여행자보험)</td>
+  <td class="border border-gray-300 px-4 py-3">삼성화재 해외여행보험</td>
+  <td class="border border-gray-300 px-4 py-3">
+    <a href="https://direct.samsungfire.com/mall/PP030701_001.html?init=sf" class="text-primary hover:underline truncate block" target="_blank">https://direct.samsungfire.com/mall/PP030701_001.html?init=sf</a>
+  </td>
+</tr>
+<tr>
+  <td class="border border-gray-300 px-4 py-3">22</td>
+  <td class="border border-gray-300 px-4 py-3">여행 중심형 (여행자보험)</td>
+  <td class="border border-gray-300 px-4 py-3">삼성화재 국내여행보험</td>
+  <td class="border border-gray-300 px-4 py-3">
+    <a href="https://direct.samsungfire.com/mall/PP030703_001.html" class="text-primary hover:underline truncate block" target="_blank">https://direct.samsungfire.com/mall/PP030703_001.html</a>
+  </td>
+</tr>
+<tr>
+  <td class="border border-gray-300 px-4 py-3">23</td>
+  <td class="border border-gray-300 px-4 py-3">활동적인 라이프스타일형 (레저 상해보험)</td>
+  <td class="border border-gray-300 px-4 py-3">NH농협손해보험 레저상해보험</td>
+  <td class="border border-gray-300 px-4 py-3">
+    <a href="https://www.nhfire.co.kr/product/retrieveProduct.nhfire?pdtCd=E710211" class="text-primary hover:underline truncate block" target="_blank">https://www.nhfire.co.kr/product/retrieveProduct.nhfire?pdtCd=E710211</a>
+  </td>
+</tr>
+<tr>
+  <td class="border border-gray-300 px-4 py-3">24</td>
+  <td class="border border-gray-300 px-4 py-3">활동적인 라이프스타일형 (레저 상해보험)</td>
+  <td class="border border-gray-300 px-4 py-3">삼성화재 미니생활(레저)보험</td>
+  <td class="border border-gray-300 px-4 py-3">
+    <a href="https://direct.samsungfire.com/mall/PP030802_001.html" class="text-primary hover:underline truncate block" target="_blank">https://direct.samsungfire.com/mall/PP030802_001.html</a>
+  </td>
+</tr>
+<tr>
+  <td class="border border-gray-300 px-4 py-3">25</td>
+  <td class="border border-gray-300 px-4 py-3">활동적인 라이프스타일형 (레저 상해보험)</td>
+  <td class="border border-gray-300 px-4 py-3">캐롯손해보험 스마트ON 레저상해보험(모바일 전용)</td>
+  <td class="border border-gray-300 px-4 py-3">
+    <a href="https://www.carrotins.com/mobile/calculation/general/leisureSwitch/intro/?NaPm=ct%3Dm0oks6xc%7Cci%3D0yC0001E0rzALVg8NvoZ%7Ctr%3Dbrnd%7Chk%3D3a9bc6f9ba6405328d4432bc0fc2974fd76bfd67%7Cnacn%3DPOZ7BMwHruqU&afcDtFlgcd=M_%ED%99%88%EB%A7%81%ED%81%AC_%ED%9A%8C%EC%82%AC%EB%AA%85_200%EB%A7%8C1_0902&afcDtcd=NAVER_BS_MO_CORP&afccd=PA00832&main=y&utm_campaign=general&utm_content=homelink_corp_MO_240902_200_1&utm_medium=search_brand&utm_source=naver_corp_mo" class="text-primary hover:underline truncate block" target="_blank">https://www.carrotins.com/mobile/calculation/general/leisureSwitch/intro/?NaPm=ct%3Dm0oks6xc%7Cci%3D0yC0001E0rzALVg8NvoZ%7Ctr%3Dbrnd%7Chk%3D3a9bc6f9ba6405328d4432bc0fc2974fd76bfd67%7Cnacn%3DPOZ7BMwHruqU&afcDtFlgcd=M_%ED%99%88%EB%A7%81%ED%81%AC_%ED%9A%8C%EC%82%AC%EB%AA%85_200%EB%A7%8C1_0902&afcDtcd=NAVER_BS_MO_CORP&afccd=PA00832&main=y&utm_campaign=general&utm_content=homelink_corp_MO_240902_200_1&utm_medium=search_brand&utm_source=naver_corp_mo</a>
+  </td>
+</tr>
+<tr>
+  <td class="border border-gray-300 px-4 py-3">26</td>
+  <td class="border border-gray-300 px-4 py-3">사후 가족 재정 안정형 (종신보험)</td>
+  <td class="border border-gray-300 px-4 py-3">한화생명 THe H 종신보험</td>
+  <td class="border border-gray-300 px-4 py-3">
+    <a href="https://www.hanwhalife.com/main/insurance/product/IN_SM00000_P20000.do?catecode=IS091067&idx=240&prodNm=%ED%95%9C%ED%99%94%EC%83%9D%EB%AA%85%20%EA%B1%B4%EA%B0%95%ED%94%8C%EB%9F%AC%EC%8A%A4%20%EC%A2%85%EC%8B%A0%EB%B3%B4%ED%97%98(%EB%AC%B4)" class="text-primary hover:underline truncate block" target="_blank">https://www.hanwhalife.com/main/insurance/product/IN_SM00000_P20000.do?catecode=IS091067&idx=240&prodNm=%ED%95%9C%ED%99%94%EC%83%9D%EB%AA%85%20%EA%B1%B4%EA%B0%95%ED%94%8C%EB%9F%AC%EC%8A%A4%20%EC%A2%85%EC%8B%A0%EB%B3%B4%ED%97%98(%EB%AC%B4)</a>
+  </td>
+</tr>
+<tr>
+  <td class="border border-gray-300 px-4 py-3">27</td>
+  <td class="border border-gray-300 px-4 py-3">사후 가족 재정 안정형 (종신보험)</td>
+  <td class="border border-gray-300 px-4 py-3">삼성생명 든든플러스종신보험</td>
+  <td class="border border-gray-300 px-4 py-3">
+    <a href="https://www.samsunglife.com/dcms/upload/2024/05/20/%EC%82%BC%EC%84%B1%20%EB%93%A0%EB%93%A0%ED%94%8C%EB%9F%AC%EC%8A%A4%EC%A2%85%EC%8B%A0%EB%B3%B4%ED%97%98.pdf" class="text-primary hover:underline truncate block" target="_blank">https://www.samsunglife.com/dcms/upload/2024/05/20/%EC%82%BC%EC%84%B1%20%EB%93%A0%EB%93%A0%ED%94%8C%EB%9F%AC%EC%8A%A4%EC%A2%85%EC%8B%A0%EB%B3%B4%ED%97%98.pdf</a>
+  </td>
+</tr>
+<tr>
+  <td class="border border-gray-300 px-4 py-3">28</td>
+  <td class="border border-gray-300 px-4 py-3">사후 가족 재정 안정형 (종신보험)</td>
+  <td class="border border-gray-300 px-4 py-3">교보생명 (무)라이프플래닛e종신보험</td>
+  <td class="border border-gray-300 px-4 py-3">
+    <a href="https://www.lifeplanet.co.kr/products/pg/PG02000S.dev" class="text-primary hover:underline truncate block" target="_blank">https://www.lifeplanet.co.kr/products/pg/PG02000S.dev</a>
+  </td>
+</tr>
+<tr>
+  <td class="border border-gray-300 px-4 py-3">29</td>
+  <td class="border border-gray-300 px-4 py-3">사후 대비형 (장례비보험)</td>
+  <td class="border border-gray-300 px-4 py-3">예다함 상조 상품</td>
+  <td class="border border-gray-300 px-4 py-3">
+    <a href="www.yedaham.co.kr" class="text-primary hover:underline truncate block" target="_blank">www.yedaham.co.kr</a>
+  </td>
+</tr>
+<tr>
+  <td class="border border-gray-300 px-4 py-3">30</td>
+  <td class="border border-gray-300 px-4 py-3">사후 대비형 (장례비보험)</td>
+  <td class="border border-gray-300 px-4 py-3">프리드라이프 상조 상품</td>
+  <td class="border border-gray-300 px-4 py-3">
+    <a href="https://preedlife.com/" class="text-primary hover:underline truncate block" target="_blank">https://preedlife.com/</a>
+  </td>
+</tr>
+<tr>
+  <td class="border border-gray-300 px-4 py-3">31</td>
+  <td class="border border-gray-300 px-4 py-3">사후 대비형 (장례비보험)</td>
+  <td class="border border-gray-300 px-4 py-3">보람상조 상조 상품</td>
+  <td class="border border-gray-300 px-4 py-3">
+    <a href="www.boram.com" class="text-primary hover:underline truncate block" target="_blank">www.boram.com</a>
+  </td>
+</tr>
+<tr>
+  <td class="border border-gray-300 px-4 py-3">32</td>
+  <td class="border border-gray-300 px-4 py-3">통합 간병·치매 대비형 (간병보험, 치매보험)</td>
+  <td class="border border-gray-300 px-4 py-3">DB손해보험 간편한가족사랑간병치매보험</td>
+  <td class="border border-gray-300 px-4 py-3">
+    <a href="https://www.idbins.com/FWMALV6711.do" class="text-primary hover:underline truncate block" target="_blank">https://www.idbins.com/FWMALV6711.do</a>
+  </td>
+</tr>
+<tr>
+  <td class="border border-gray-300 px-4 py-3">33</td>
+  <td class="border border-gray-300 px-4 py-3">통합 간병·치매 대비형 (간병보험, 치매보험)</td>
+  <td class="border border-gray-300 px-4 py-3">삼성화재 365일 간병비 플랜</td>
+  <td class="border border-gray-300 px-4 py-3">
+    <a href="https://direct.samsungfire.com/mall/PP030408_001.html" class="text-primary hover:underline truncate block" target="_blank">https://direct.samsungfire.com/mall/PP030408_001.html</a>
+  </td>
+</tr>
+<tr>
+  <td class="border border-gray-300 px-4 py-3">34</td>
+  <td class="border border-gray-300 px-4 py-3">통합 간병·치매 대비형 (간병보험, 치매보험)</td>
+  <td class="border border-gray-300 px-4 py-3">라이나생명 간병비 치매보험</td>
+  <td class="border border-gray-300 px-4 py-3">
+    <a href="https://direct.e-lina.co.kr/emall/P00320.htm?t=S1_2312_A_02&adtype=WEB_SA&media=NAVER_DIRECT" class="text-primary hover:underline truncate block" target="_blank">https://direct.e-lina.co.kr/emall/P00320.htm?t=S1_2312_A_02&adtype=WEB_SA&media=NAVER_DIRECT</a>
+  </td>
+</tr>
+<tr>
+  <td class="border border-gray-300 px-4 py-3">35</td>
+  <td class="border border-gray-300 px-4 py-3">연금 보장형 (연금보험)</td>
+  <td class="border border-gray-300 px-4 py-3">삼성생명 인터넷 NEW 연금보험(2401)(무배당)</td>
+  <td class="border border-gray-300 px-4 py-3">
+    <a href="https://direct.samsunglife.com/iAnnuity.eds?cid=di%3Asli%3Aiannuity%3Amenu" class="text-primary hover:underline truncate block" target="_blank">https://direct.samsunglife.com/iAnnuity.eds?cid=di%3Asli%3Aiannuity%3Amenu</a>
+  </td>
+</tr>
+<tr>
+  <td class="border border-gray-300 px-4 py-3">36</td>
+  <td class="border border-gray-300 px-4 py-3">연금 보장형 (연금보험)</td>
+  <td class="border border-gray-300 px-4 py-3">한화생명 e재테크저축보험 무배당</td>
+  <td class="border border-gray-300 px-4 py-3">
+    <a href="https://direct.hanwhalife.com/products/CM090301" class="text-primary hover:underline truncate block" target="_blank">https://direct.hanwhalife.com/products/CM090301</a>
+  </td>
+</tr>
+<tr>
+  <td class="border border-gray-300 px-4 py-3">37</td>
+  <td class="border border-gray-300 px-4 py-3">연금 보장형 (연금보험)</td>
+  <td class="border border-gray-300 px-4 py-3">연금저축손해보험 노후생활지킴이보험2404</td>
+  <td class="border border-gray-300 px-4 py-3">
+    <a href="https://www.meritzfire.com/annuity-and-saving/annuity/for-the-aged.do#!/" class="text-primary hover:underline truncate block" target="_blank">https://www.meritzfire.com/annuity-and-saving/annuity/for-the-aged.do#!/</a>
+  </td>
+</tr>
+<tr>
+  <td class="border border-gray-300 px-4 py-3">38</td>
+  <td class="border border-gray-300 px-4 py-3">온라인 보호형 (사이버보험/개인정보/보이스피싱)</td>
+  <td class="border border-gray-300 px-4 py-3">카카오페이손해보험 금융안심보험</td>
+  <td class="border border-gray-300 px-4 py-3">
+    <a href="https://kakaopayinscorp.co.kr/products/FAO001" class="text-primary hover:underline truncate block" target="_blank">https://kakaopayinscorp.co.kr/products/FAO001</a>
+  </td>
+</tr>
+<tr>
+  <td class="border border-gray-300 px-4 py-3">39</td>
+  <td class="border border-gray-300 px-4 py-3">온라인 보호형 (사이버보험/개인정보/보이스피싱)</td>
+  <td class="border border-gray-300 px-4 py-3">삼성화재 사이버사고보상보험</td>
+  <td class="border border-gray-300 px-4 py-3">
+    <a href="https://direct.samsungfire.com/mall/PP030311_001.html" class="text-primary hover:underline truncate block" target="_blank">https://direct.samsungfire.com/mall/PP030311_001.html</a>
+  </td>
+</tr>
+<tr>
+  <td class="border border-gray-300 px-4 py-3">40</td>
+  <td class="border border-gray-300 px-4 py-3">온라인 보호형 (사이버보험/개인정보/보이스피싱)</td>
+  <td class="border border-gray-300 px-4 py-3">DB손해보험 개인정보보호배상책임보험</td>
+  <td class="border border-gray-300 px-4 py-3">
+    <a href="https://www.directdb.co.kr/gnrl/prd/gnrlCorp/custInfoCorpView.do?searchPdcCd=13418&searchPdcTrtHistCd=00&pdcDvcd=g_prniflbt" class="text-primary hover:underline truncate block" target="_blank">https://www.directdb.co.kr/gnrl/prd/gnrlCorp/custInfoCorpView.do?searchPdcCd=13418&searchPdcTrtHistCd=00&pdcDvcd=g_prniflbt</a>
+  </td>
+</tr>
+<tr>
+  <td class="border border-gray-300 px-4 py-3">41</td>
+  <td class="border border-gray-300 px-4 py-3">반려동물 보호형 (펫보험)</td>
+  <td class="border border-gray-300 px-4 py-3">메리츠화재 펫처민트</td>
+  <td class="border border-gray-300 px-4 py-3">
+    <a href="https://store.meritzfire.com/pet/direct-lndB01/contract.do#!/01" class="text-primary hover:underline truncate block" target="_blank">https://store.meritzfire.com/pet/direct-lndB01/contract.do#!/01</a>
+  </td>
+</tr>
+<tr>
+  <td class="border border-gray-300 px-4 py-3">42</td>
+  <td class="border border-gray-300 px-4 py-3">반려동물 보호형 (펫보험)</td>
+  <td class="border border-gray-300 px-4 py-3">DB손해보험 펫블리 반려묘보험</td>
+  <td class="border border-gray-300 px-4 py-3">
+    <a href="https://directidb.co.kr/l_pet_cat/index.html" class="text-primary hover:underline truncate block" target="_blank">https://directidb.co.kr/l_pet_cat/index.html</a>
+  </td>
+</tr>
+<tr>
+  <td class="border border-gray-300 px-4 py-3">43</td>
+  <td class="border border-gray-300 px-4 py-3">반려동물 보호형 (펫보험)</td>
+  <td class="border border-gray-300 px-4 py-3">DB손해보험 펫블리 반려견보험</td>
+  <td class="border border-gray-300 px-4 py-3">
+    <a href="https://directidb.co.kr/l_pet_dog/index.html" class="text-primary hover:underline truncate block" target="_blank">https://directidb.co.kr/l_pet_dog/index.html</a>
+  </td>
+</tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</main>
+
+<!-- Footer -->
+<footer class="bg-white py-6 border-t border-gray-200">
+<div class="text-center">
+<p class="text-sm text-gray-500">© ThinkPool | 액티브시니어 런게이션 통합 서비스 플랫폼</p>
+<p class="text-sm text-gray-500 mt-1">고객센터: 1666-6300 사업자 등록번호: 116-81-54775 대표: 김동진</p>
+</div>
+</footer>
+</div>
+</body>
+</html>
